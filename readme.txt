@@ -19,6 +19,11 @@ JQuery Drop Down Menu plugin can manage Multi-level dropdown  menu, plus you can
 3. Add <code>&lt;?php jquery_drop_down_menu('HOME') ?&gt;</code> function on your theme header.php or where you want to display menu.
 
 You will find 'Dropdown Menu' menu in your WordPress admin panel.
+Under 'Dropdown Menu' you  will see  number of Settings
+1-Menu Animation Setting.
+2-Page Sorting  Setting.
+3-Page Sorting  Order.
+4-Depth.
 
 For basic usage, you can also have a look at the [plugin homepage](http://www.phpinterviewquestion.com/jquery-dropdown-menu-plugin/).
 
