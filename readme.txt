@@ -14,7 +14,7 @@ JQuery Drop Down Menu plugin can manage Multi-level dropdown  menu, plus you can
 
 == Installation ==
 
-1. Upload the entire `jquery-drop-down-menu` folder to the `/wp-content/plugins/` directory.
+1. Upload the entire `jquery-drop-down-menu-plugin` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Add <code>&lt;?php jquery_drop_down_menu('HOME') ?&gt;</code> function on your theme header.php or where you want to display menu.
 
