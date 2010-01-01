@@ -34,13 +34,13 @@ delete_option('fadein');
  delete_option('sort_order');
  delete_option('depth');
 */
-/*add_option('home_link', '1');
+add_option('home_link', '1');
 add_option('include', '1');
 add_option('fadein', '100');
 add_option('fadeout', '100');
 add_option('sort_by', 'menu_order');
 add_option('sort_order', 'ASC');
-add_option('depth', '0');*/
+add_option('depth', '0');
  update_option('home_link', 1);
  update_option('include', 1);
  update_option('fadein', 100);
