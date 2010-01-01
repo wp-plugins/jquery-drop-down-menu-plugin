@@ -193,10 +193,20 @@ function jquery_drop_down_menu_style() {
 		';
 		
 $include = get_option('include');
+$include = get_option('include');
 $fadein = get_option('fadein');
+if(empty($fadein))
+{
+$fadein =100;
+}
+
 $fadeout = get_option('fadeout');
+if(empty($fadeout))
+{
+$fadeout =100;
+}
 	
-;	
+	
 		if($include==1)
 	    {
 		
