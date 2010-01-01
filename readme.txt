@@ -6,20 +6,17 @@ Requires at least: 2.7
 Tested up to: 2.9-rare
 Stable tag: 2.0.7
 
-Just another JQuery Drop Down Menu plugin. Simple but flexible.
+
 
 == Description ==
-
-Just another JQuery Drop Down Menu plugin. Simple but flexible.
-
-Query Drop Down Menu plugin can manage multi drop down menu, plus you can customize the menu with full animation support and many more, 
+JQuery Drop Down Menu plugin can manage Multi-level dropdown  menu, plus you can customize the menu with full animation support and many more from admin area, 
 
 
 == Installation ==
 
 1. Upload the entire `jquery-drop-down-menu` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Add <?php jquery_drop_down_menu('HOME') ?> function on your theme header.php or where you want to display menu.
+3. Add <code>&lt;?php jquery_drop_down_menu('HOME') ?&gt;</code> function on your theme header.php or where you want to display menu.
 
 You will find 'Dropdown Menu' menu in your WordPress admin panel.
 
