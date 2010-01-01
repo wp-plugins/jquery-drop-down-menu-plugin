@@ -29,7 +29,7 @@ For basic usage, you can also have a look at the [plugin homepage](http://www.ph
 
 == Frequently Asked Questions ==
 
-Do you have questions or issues with Contact Form 7? Use these support channels appropriately.
+Do you have questions or issues with JQuery Drop Down Menu? Use these support channels appropriately.
 
 1. [FAQ](http://www.phpinterviewquestion.com/jquery-dropdown-menu-plugin/)
 1. [Support Forum](http://www.phpinterviewquestion.com/jquery-dropdown-menu-plugin/)
