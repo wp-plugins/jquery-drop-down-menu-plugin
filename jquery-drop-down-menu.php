@@ -57,7 +57,7 @@ add_options_page('Menu Management', 'Dropdown Menu', 'edit_plugins', "jquery_dro
 
 
 
- if( isset($_POST[action]) && $_POST[action]=='update' )
+ if( isset($_POST[action]) && $_POST[action]=='jquerymenuupdate	' )
  {
  update_option('home_link', $_POST['home_link']);
  update_option('include', $_POST['include']);
@@ -86,9 +86,8 @@ $depth = get_option('depth');
 <div class="wrap">
 <h2><?php echo __('Drop Down Menu Options'); ?></h2>
 <form name="dropdown" method="post" action="">
-    <input type="hidden" name="action" value="update" />
-    
-    <fieldset class="options">
+    <input type="hidden" name="action" value="jquerymenuupdate" />
+        <fieldset class="options">
 	<h3 >Includes Below link in menu:</h3>
 	<table>
 		<tr>
@@ -211,7 +210,7 @@ $fadeout =100;
 	    {
 		
 	echo' <script>   $(document).ready(function(){
-						   jQuery("#dropmenu ul").css({display: "none"}); 
+				 jQuery("#dropmenu ul").css({display: "none"}); 
 jQuery("#dropmenu li").hover(function(){
 		jQuery(this).find("ul:first").fadeIn("'.$fadein.'");
 		},

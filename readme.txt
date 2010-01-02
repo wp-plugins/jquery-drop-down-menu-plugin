@@ -39,4 +39,12 @@ Do you have questions or issues with JQuery Drop Down Menu? Use these support ch
 
 [Support](http://www.phpinterviewquestion.com/jquery-dropdown-menu-plugin/)
 
+== Changelog ==
+
+1.1
+- Fixed some bugs with the code. Sorry, I accidentally left some test code in!
+
+1.0
+- First build
+
 
