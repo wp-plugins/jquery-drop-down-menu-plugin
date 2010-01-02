@@ -43,7 +43,6 @@ Do you have questions or issues with JQuery Drop Down Menu? Use these support ch
 
 1.1
 - Fixed some bugs with the code. Sorry, I accidentally left some test code in!
-
 1.0
 - First build
 
