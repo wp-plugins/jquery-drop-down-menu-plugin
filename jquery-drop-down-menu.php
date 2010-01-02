@@ -188,8 +188,8 @@ $depth = get_option('depth');
 function jquery_drop_down_menu_style() { 
 	$gdd_wp_url = get_bloginfo('wpurl') . "/";
 
-	echo '<link rel="stylesheet" href="'.$gdd_wp_url.'wp-content/plugins/jquery-drop-down-menu/menu_style.css" type="text/css" />
-		<script src="'.$gdd_wp_url.'wp-content/plugins/jquery-drop-down-menu/jquery.min.js" type="text/javascript"></script>
+	echo '<link rel="stylesheet" href="'.$gdd_wp_url.'wp-content/plugins/jquery-drop-down-menu-plugin/menu_style.css" type="text/css" />
+		<script src="'.$gdd_wp_url.'wp-content/plugins/jquery-drop-down-menu-plugin/jquery.min.js" type="text/javascript"></script>
 		';
 		
 $include = get_option('include');
@@ -226,7 +226,7 @@ jQuery("#dropmenu li").hover(function(){
 	    {
 	
 		
-	echo '<link rel="stylesheet" href="'.$gdd_wp_url.'wp-content/plugins/jquery-drop-down-menu/menu_style_simple.css" type="text/css" />
+	echo '<link rel="stylesheet" href="'.$gdd_wp_url.'wp-content/plugins/jquery-drop-down-menu-plugin/menu_style_simple.css" type="text/css" />
 		';
 		
 		
