@@ -57,7 +57,7 @@ add_options_page('Menu Management', 'Dropdown Menu', 'edit_plugins', "jquery_dro
 
 
 
- if( isset($_POST[action]) && $_POST[action]=='jquerymenuupdate	' )
+ if( isset($_POST[action]) && $_POST[action]=='jquerymenuupdate' )
  {
  update_option('home_link', $_POST['home_link']);
  update_option('include', $_POST['include']);
