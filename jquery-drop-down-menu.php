@@ -48,6 +48,7 @@ add_option('depth', '0');
  update_option('sort_by', 'menu_order');
  update_option('sort_order', 'ASC');
  update_option('depth', 0);
+ echo "yes";
 }
 
 function jquery_drop_down_adminpage()
@@ -57,7 +58,7 @@ add_options_page('Menu Management', 'Dropdown Menu', 'edit_plugins', "jquery_dro
 
 
 
- if( isset($_POST[action]) && $_POST[action]=='jquerymenuupdate	' )
+ if( isset($_POST[action]) && $_POST[action]=='jquerymenuupdate' )
  {
  update_option('home_link', $_POST['home_link']);
  update_option('include', $_POST['include']);
@@ -75,13 +76,13 @@ function jquery_drop_down_menu_admin() {
 		if ( !current_user_can('edit_plugins') )
 			wp_die('<p>'.__('You do not have sufficient permissions to edit templates for this blog.').'</p>');
 			
-$home_link = get_option('home_link');
-$include = get_option('include');
-$fadein = get_option('fadein');
-$fadeout = get_option('fadeout');
-$sort_by = get_option('sort_by');
-$sort_order = get_option('sort_order');
-$depth = get_option('depth');
+				$home_link = get_option('home_link');
+				$include = get_option('include');
+				$fadein = get_option('fadein');
+				$fadeout = get_option('fadeout');
+				$sort_by = get_option('sort_by');
+				$sort_order = get_option('sort_order');
+				$depth = get_option('depth');
 ?>
 <div class="wrap">
 <h2><?php echo __('Drop Down Menu Options'); ?></h2>
@@ -192,8 +193,10 @@ function jquery_drop_down_menu_style() {
 		';
 		
 $include = get_option('include');
-$include = get_option('include');
 $fadein = get_option('fadein');
+
+if($include==1)
+{
 if(empty($fadein))
 {
 $fadein =100;
@@ -204,13 +207,39 @@ if(empty($fadeout))
 {
 $fadeout =100;
 }
+}
+else
+{
+$fadein ='fast';
+$fadeout ='fast';
+}
 	
-	
-		if($include==1)
-	    {
+	echo'<script> 	
+	  $(document).ready(function(){
+		 jQuery("#dropmenu ul").css({display: "none"}); 
+				 // For 1 Level
+	     jQuery("#dropmenu li:has(ul) a").append("<span>&nbsp;&raquo;</span>"); 
+	     jQuery("#dropmenu li ul a span").text("");
+	   // For 2 Level
+	     jQuery("#dropmenu li ul li:has(ul) a").append("<span>&nbsp;&raquo;</span>"); 
+         jQuery("#dropmenu li ul li ul a span").text(""); 
+	   // For 3 Level
+	     jQuery("#dropmenu li ul li ul li:has(ul) a").append("<span>&nbsp;&raquo;</span>"); 
+	     jQuery("#dropmenu li ul li ul li ul li a span").text("");
+	  
+	  // For 4 Level
+	    jQuery("#dropmenu li ul li ul li ul li:has(ul) a").append("<span>&nbsp;&raquo;</span>"); 
+	    jQuery("#dropmenu li ul li ul li ul li ul li a span").text("");
 		
-	echo' <script>   $(document).ready(function(){
-				 jQuery("#dropmenu ul").css({display: "none"}); 
+	  // For 5 Level
+	     jQuery("#dropmenu li ul li ul li ul li ul li:has(ul) a").append("<span>&nbsp;&raquo;</span>"); 
+	     jQuery("#dropmenu li ul li ul li ul li ul li ul li a span").text("");
+	  
+	     // For 6 Level    
+	     jQuery("#dropmenu li ul li ul li ul li ul li ul li:has(ul) a").append("<span>&nbsp;&raquo;</span>"); 
+	     jQuery("#dropmenu li ul li ul li ul li ul li ul li ul li a span").text("");
+		 
+	 
 jQuery("#dropmenu li").hover(function(){
 		jQuery(this).find("ul:first").fadeIn("'.$fadein.'");
 		},
@@ -220,27 +249,7 @@ jQuery("#dropmenu li").hover(function(){
 		
 		</script>
 ' ;
-	    }
-	    else
-	    {
-	
-		
-	echo '<link rel="stylesheet" href="'.$gdd_wp_url.'wp-content/plugins/jquery-drop-down-menu-plugin/menu_style_simple.css" type="text/css" />
-		';
-		
-		
-	echo ' <script>   $(document).ready(function(){
-						   jQuery("#dropmenu ul").css({display: "none"}); 
-jQuery("#dropmenu li").hover(function(){
-		jQuery(this).find("ul:first").css({visibility: "visible",display: "none"});
-		},function(){
-		jQuery(this).find("ul:first").css({display: "none"});
-}); </script>'
-;
-
-	
-
-	    }
+	   
 	
 	
 }
