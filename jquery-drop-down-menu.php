@@ -48,7 +48,7 @@ add_option('depth', '0');
  update_option('sort_by', 'menu_order');
  update_option('sort_order', 'ASC');
  update_option('depth', 0);
- echo "yes";
+
 }
 
 function jquery_drop_down_adminpage()
