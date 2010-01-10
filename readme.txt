@@ -40,5 +40,12 @@ Do you have questions or issues with JQuery Drop Down Menu? Use these support ch
 [Support](http://www.phpinterviewquestion.com/jquery-dropdown-menu-plugin/)
 
 
+== Changelog ==
+2.0
 
+Add arrow that indicate parent menu has childs
+
+1.0
+ First build
+ Fixed some bugs with the code. Sorry, I accidentally left some test code in!
 
