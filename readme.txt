@@ -45,7 +45,6 @@ Do you have questions or issues with JQuery Drop Down Menu? Use these support ch
 
 Add arrow that indicate parent menu has childs
 
-
 1.0
  First build
  Fixed some bugs with the code. Sorry, I accidentally left some test code in!
