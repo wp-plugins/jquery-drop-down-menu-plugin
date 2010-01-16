@@ -43,7 +43,10 @@ Do you have questions or issues with JQuery Drop Down Menu? Use these support ch
 == Changelog ==
 2.0
 
-Add arrow that indicate parent menu has childs
+Add arrow that indicate parent menu has childs, 
+Add exclude pages control
+Add custom menu option
+Add two option for menu animation etc
 
 1.0
  First build
