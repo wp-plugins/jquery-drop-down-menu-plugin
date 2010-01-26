@@ -20,7 +20,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 if (isset($_GET['activate']) && $_GET['activate'] == 'true') {
+if(get_option('pluginactive')!='yes')
+{
 jquery_dropdown_install();
+}
 }
 
 function jquery_dropdown_install() {
@@ -44,6 +47,7 @@ add_option('sort_by', 'menu_order');
 add_option('sort_order', 'ASC');
 add_option('depth', '0');
  update_option('home_link', 1);
+  update_option('pluginactive', 'yes');
  update_option('include', 1);
  update_option('fadein', 100);
  update_option('fadeout', 100);
