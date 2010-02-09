@@ -28,15 +28,6 @@ jquery_dropdown_install();
 
 function jquery_dropdown_install() {
 			
-/* delete_option('home_link');
-delete_option('jquery_dropdown_pages');
- delete_option('include');
-delete_option('fadein');
- delete_option('fadeout');
- delete_option('sort_by');
- delete_option('sort_order');
- delete_option('depth');
-*/
 add_option('home_link', '1');
 add_option('include', '1');
 add_option('fadein', '100');
@@ -64,10 +55,9 @@ add_option('depth', '0');
 }
 
 function jquery_drop_down_adminpage()
- {
-add_options_page('Menu Management', 'Dropdown Menu', 'edit_plugins', "jquery_drop_down_menu",'jquery_drop_down_menu_admin');
-}
-
+   {
+   add_options_page('Menu Management', 'Dropdown Menu', 'edit_plugins', "jquery_drop_down_menu",'jquery_drop_down_menu_admin');
+    }
 
 
  if( isset($_POST[action]) && $_POST[action]=='jquerymenuupdate' )
@@ -90,19 +80,19 @@ add_options_page('Menu Management', 'Dropdown Menu', 'edit_plugins', "jquery_dro
 	 $count++;
 	 }
 	 }
- update_option('exclude_pages', $exclude);
- update_option('home_link', $_POST['home_link']);
- update_option('include', $_POST['include']);
- update_option('fadein', $_POST['fadein']);
- update_option('fadeout', $_POST['fadeout']);
-  update_option('fadein1', $_POST['fadein1']);
- update_option('fadeout1', $_POST['fadeout1']);
- update_option('sort_by', $_POST['sort_by']);
-  update_option('sort_order', $_POST['sort_order']);
-  update_option('depth', $_POST['depth']);
-  update_option('custom_menu', $_POST['custom_menu']);
-  update_option('custom_menu_value', $_POST['custom_menu_value']);
-  update_option('custom_menu_include', $_POST['custom_menu_include']);
+		  update_option('exclude_pages', $exclude);
+		  update_option('home_link', $_POST['home_link']);
+		  update_option('include', $_POST['include']);
+		  update_option('fadein', $_POST['fadein']);
+		  update_option('fadeout', $_POST['fadeout']);
+		  update_option('fadein1', $_POST['fadein1']);
+		  update_option('fadeout1', $_POST['fadeout1']);
+		  update_option('sort_by', $_POST['sort_by']);
+		  update_option('sort_order', $_POST['sort_order']);
+		  update_option('depth', $_POST['depth']);
+		  update_option('custom_menu', $_POST['custom_menu']);
+		  update_option('custom_menu_value', $_POST['custom_menu_value']);
+		  update_option('custom_menu_include', $_POST['custom_menu_include']);
   
  
 
@@ -133,19 +123,19 @@ function jquery_drop_down_menu_admin() {
 ?>
 <div class="wrap">
 <h2><?php echo __('Drop Down Menu Options'); ?></h2>
-<script>
-function displayController(chk)
-{
-if(chk.checked)
-{
-document.getElementById('custommenuid').style.display='';
-}
-else
-{
-document.getElementById('custommenuid').style.display='none';
-}
-
-}
+		<script>
+		function displayController(chk)
+		{
+		if(chk.checked)
+		{
+		document.getElementById('custommenuid').style.display='';
+		}
+		else
+		{
+		document.getElementById('custommenuid').style.display='none';
+		}
+		
+		}
 
 </script>
 <form name="dropdown" method="post" action="">
@@ -170,7 +160,7 @@ document.getElementById('custommenuid').style.display='none';
 			<?php if($custom_menu == "1"){ echo 'checked="checked"'; } ?>/> Before dynamic pages menu &nbsp;  <br />
 			<input type="radio"  name="custom_menu"  value="2"
 			
-			<?php if($custom_menu == "2"){ echo 'checked="checked"'; } ?>/> After dynamic pages menu &nbsp;<br /><textarea  name="custom_menu_value" style="font-size:10px"  cols="100" rows="10" ><?php echo $custom_menu_value ?></textarea></td>
+			<?php if($custom_menu == "2"){ echo 'checked="checked"'; } ?>/> After dynamic pages menu &nbsp;<br /><textarea  name="custom_menu_value" style="font-size:10px"  cols="100" rows="10" ><?php echo stripslashes($custom_menu_value); ?></textarea></td>
 			</tr>
 	</table>
 	
@@ -214,10 +204,10 @@ document.getElementById('custommenuid').style.display='none';
    (
  in_array("$pagg->ID", $pagearray)) {
   $checked= "checked='checked'"; }
-  else
-  {
+   else
+   {
    $checked= "";
-  }
+   }
   
  
 
@@ -227,11 +217,14 @@ document.getElementById('custommenuid').style.display='none';
 	echo 	$option;
 	
 	if($count%5==0)
- { 
- echo "</tr><tr><td height='10px'></td></tr>";
- $count=0;
- }$count++;
-	}?>
+    { 
+      echo "</tr><tr><td height='10px'></td></tr>";
+     $count=0;
+    }
+ 
+     $count++;
+	}
+	?>
 	
 		
 	
@@ -434,22 +427,19 @@ function jquery_drop_down_menu($home='Home') {
 	{
 	echo '<li ><a href="'.$gdd_wp_url.'" title="'.$home.'">'.$home.'</a></li>';
 	}
-	if($custom_menu==1 && $custom_menu_include==1)
-	{
-	echo "$custom_menu_value ";
-	}
-	
-	
-		wp_list_pages($parameters);	
+		   if($custom_menu==1 && $custom_menu_include==1)
+			{
+		   echo stripslashes($custom_menu_value);
+			}
 		
-		 if($custom_menu==2 && $custom_menu_include==1)
-	{
-	echo "$custom_menu_value ";
-	}
-	     
-	echo '</ul>
-	
-	';
+			wp_list_pages($parameters);	
+			
+			 if($custom_menu==2 && $custom_menu_include==1)
+			{
+		   echo stripslashes($custom_menu_value);
+			}
+			 
+	echo '</ul>';
 	
 
 }
