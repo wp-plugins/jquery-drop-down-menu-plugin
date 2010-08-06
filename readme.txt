@@ -3,8 +3,8 @@ Contributors: Sana Ullah
 Donate link: http://www.phpinterviewquestion.com/contact/
 Tags: Drop Down Menu,JQuery Drop Down Menu, JQuery Multi Drop Down Menu plugin
 Requires at least: 2.7
-Tested up to: 2.9-rare
-Stable tag: 2.0
+Tested up to: 3.1
+Stable tag: 2.4
 
 
 
@@ -21,10 +21,16 @@ JQuery Drop Down Menu plugin can manage Multi-level dropdown  menu, plus you can
 You will find 'Dropdown Menu' menu in your WordPress admin panel.
 
 Under 'Dropdown Menu' you  will see  number of Settings
-1-Menu Animation Setting.
-2-Page Sorting  Setting.
-3-Page Sorting  Order.
-4-Depth.
+
+    * Multi-level dropdown
+    * Exclude Pages
+    * Include Custom menu
+    * Two type Jquery Animation
+    * Option to enable/disable Jquery Animation
+    * Page Sorting Setting
+    * Page Sorting Order
+    * Depth
+
 
 For basic usage, you can also have a look at the [plugin homepage](http://www.phpinterviewquestion.com/jquery-dropdown-menu-plugin/).
 
@@ -43,12 +49,12 @@ Do you have questions or issues with JQuery Drop Down Menu? Use these support ch
 == Changelog ==
 2.0
 
-Add arrow that indicate parent menu has childs
+Add arrow that indicate parent menu has childs, 
+Add exclude pages control
+Add custom menu option
+Add two option for menu animation etc
 
 1.0
  First build
  Fixed some bugs with the code. Sorry, I accidentally left some test code in!
-
--
-
 
