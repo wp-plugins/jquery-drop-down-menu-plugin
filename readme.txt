@@ -52,7 +52,7 @@ Do you have questions or issues with JQuery Drop Down Menu? Use these support ch
 
 Solved Jquery conflict problem,
 Now this plugin is compatible for any jquery based plugin like, LightBox,wp-cycle.
-So, you can use both plugin with our confliction.
+So, you can use both plugin without confliction.
 
 2.0
 
