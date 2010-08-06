@@ -11,6 +11,7 @@ Stable tag: 2.4
 == Description ==
 JQuery Drop Down Menu plugin can manage Multi-level dropdown  menu, plus you can customize the menu with full animation support and many more from admin area, 
 
+You can find the plugin [DEMO](http://www.phpinterviewquestion.com/jquery-dropdown-menu-plugin/) here.
 
 == Installation ==
 
@@ -47,6 +48,12 @@ Do you have questions or issues with JQuery Drop Down Menu? Use these support ch
 
 
 == Changelog ==
+2.4
+
+Solved Jquery conflict problem,
+Now this plugin is compatible for any jquery based plugin like, LightBox,wp-cycle.
+So, you can use both plugin with our confliction.
+
 2.0
 
 Add arrow that indicate parent menu has childs, 
