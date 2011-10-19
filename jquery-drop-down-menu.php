@@ -4,7 +4,7 @@ Plugin Name: JQuery Drop Down Menu
 Plugin URI: http://www.phpinterviewquestion.com/jquery-dropdown-menu-plugin/
 Description: A plugin to create Jquery Drop Down Menu with  fully customization.To show menu  Add <code>&lt;?php jquery_drop_down_menu('HOME') ?&gt;</code>  on your theme header.php or where you want to display menu.<strong>Configuration: <a href="options-general.php?page=jquery_drop_down_menu">Options &raquo; Jquery Drop Down Menu </a></strong>.
 Author: Sana  Ullah
-Version: 2.0
+Version: 2.1
 Author URI: http://www.phpinterviewquestion.com/
 
  Copyright 2009 - phpinterviewquestion.com
