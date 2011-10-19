@@ -48,6 +48,11 @@ Do you have questions or issues with JQuery Drop Down Menu? Use these support ch
 
 
 == Changelog ==
+
+2.5
+
+Stop the currently-running animation on the matched elements.
+
 2.4
 
 Solved Jquery conflict problem,
