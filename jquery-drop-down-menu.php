@@ -4,7 +4,7 @@ Plugin Name: JQuery Drop Down Menu
 Plugin URI: http://www.phpinterviewquestion.com/jquery-dropdown-menu-plugin/
 Description: A plugin to create Jquery Drop Down Menu with  fully customization.To show menu  Add <code>&lt;?php jquery_drop_down_menu('HOME') ?&gt;</code>  on your theme header.php or where you want to display menu.<strong>Configuration: <a href="options-general.php?page=jquery_drop_down_menu">Options &raquo; Jquery Drop Down Menu </a></strong>.
 Author: Sana  Ullah
-Version: 2.0
+Version: 2.4
 Author URI: http://www.phpinterviewquestion.com/
 
  Copyright 2009 - phpinterviewquestion.com
@@ -345,19 +345,19 @@ $fadeout ='fast';
      if($include==2)
       {
 		   $Jquerycode ='noCon("#dropmenu li").hover(function(){
-			noCon(this).find("ul:first").slideToggle("'.$fadein1.'");
+			noCon(this).find("ul:first").stop(true,true).slideToggle("'.$fadein1.'");
 			},
 			function(){
-			noCon(this).find("ul:first").slideUp("'.$fadeout1.'");
+			noCon(this).find("ul:first").stop(true,true).slideUp("'.$fadeout1.'");
 			});';		
 		}
 		else
 		{
 			$Jquerycode ='noCon("#dropmenu li").hover(function(){
-		noCon(this).find("ul:first").fadeIn("'.$fadein.'");
+		noCon(this).find("ul:first").stop(true,true).fadeIn("'.$fadein.'");
 		},
 		function(){
-		noCon(this).find("ul:first").fadeOut("'.$fadeout.'");
+		noCon(this).find("ul:first").stop(true,true).fadeOut("'.$fadeout.'");
 		});';
 		}
 		
@@ -367,27 +367,9 @@ $fadeout ='fast';
 	  noCon(document).ready(function(){
 		 noCon("#dropmenu ul").css({display: "none"}); 
 				 // For 1 Level
-	     noCon("#dropmenu li:has(ul) a").append("<span>&nbsp;&raquo;</span>"); 
-	     noCon("#dropmenu li ul a span").text("");
-	   // For 2 Level
-	     noCon("#dropmenu li ul li:has(ul) a").append("<span>&nbsp;&raquo;</span>"); 
-         noCon("#dropmenu li ul li ul a span").text(""); 
-	   // For 3 Level
-	     noCon("#dropmenu li ul li ul li:has(ul) a").append("<span>&nbsp;&raquo;</span>"); 
-	     noCon("#dropmenu li ul li ul li ul li a span").text("");
-	  
-	  // For 4 Level
-	    noCon("#dropmenu li ul li ul li ul li:has(ul) a").append("<span>&nbsp;&raquo;</span>"); 
-	    noCon("#dropmenu li ul li ul li ul li ul li a span").text("");
-		
-	  // For 5 Level
-	     noCon("#dropmenu li ul li ul li ul li ul li:has(ul) a").append("<span>&nbsp;&raquo;</span>"); 
-	     noCon("#dropmenu li ul li ul li ul li ul li ul li a span").text("");
-	  
-	     // For 6 Level    
-	     noCon("#dropmenu li ul li ul li ul li ul li ul li:has(ul) a").append("<span>&nbsp;&raquo;</span>"); 
-	     noCon("#dropmenu li ul li ul li ul li ul li ul li ul li a span").text("");
-		 '.$Jquerycode.'
+	     noCon("#dropmenu li:has(ul) > a").append("<span>&nbsp;&raquo;</span>"); 
+	     noCon("#dropmenu li > ul > a > span").text("");
+	  		 '.$Jquerycode.'
 	 });
 		</script>
 ' ;
