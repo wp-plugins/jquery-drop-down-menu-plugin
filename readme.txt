@@ -1,5 +1,5 @@
 === JQuery Drop Down Menu ===
-Contributors: Sana Ullah
+Contributors: SandyIN
 Donate link: http://www.phpinterviewquestion.com/contact/
 Tags: Drop Down Menu,JQuery Drop Down Menu, JQuery Multi Drop Down Menu plugin
 Requires at least: 2.7
