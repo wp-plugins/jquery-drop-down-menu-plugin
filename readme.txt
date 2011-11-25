@@ -9,7 +9,8 @@ Stable tag: 2.5
 
 
 == Description ==
-theme header.php or where you want to display menu.<strong>Configuration: <a href="options-general.php?page=jquery_drop_down_menu">Options &raquo; Jquery Drop Down Menu.
+theme header.php or where you want to display menu.
+<strong>Configuration: <a href="options-general.php?page=jquery_drop_down_menu">Options &raquo; Jquery Drop Down Menu.
 JQuery Drop Down Menu plugin can manage Multi-level dropdown  menu, plus you can customize the menu with full animation support and many more from admin area, 
 
 You can find the plugin [DEMO](http://www.phpinterviewquestion.com/jquery-dropdown-menu-plugin) here.
